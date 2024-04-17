@@ -1,0 +1,45 @@
+.searchkey-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.searchkey-container--top{
+    display: flex;
+    align-items: end;
+    gap: 0.5rem;
+}
+
+.searchkey-title{
+    font-size: 1.5rem;
+    color: var(--link-color);
+}
+
+.searchkey__partOfSpeech{;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.searchkey__partOfSpeech::before{
+    content: "-";
+    font: inherit;
+    color: inherit;
+    margin-right: 0.5rem;
+}
+
+.searchkey-container--bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.searchkey__definition-heading{
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.searchkey__definition{
+    font-size: 1rem;
+    color: var(--text-color)
+}

@@ -1,0 +1,45 @@
+.home{
+    min-height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--element-color);
+}
+
+.home__trademark-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home__trademark{
+    height: 8rem;
+    aspect-ratio: 1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+body.light .home__trademark{
+    background-image: url("../../assets/images/logo.svg");
+}
+
+body.dark .home__trademark{
+    background-image: url("../../assets/images/logo-dark.svg");
+}
+
+.home__bussiness-title{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.home__search-container{
+    padding-inline: 1rem;
+}

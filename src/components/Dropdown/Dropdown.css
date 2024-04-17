@@ -1,0 +1,120 @@
+.dropdown{
+    width: 100vw;
+    max-width: 150px;
+    height: 3rem;
+    user-select: none;
+}
+
+.dropdown__choice-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.dropdown__choice {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    height: 3rem;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 4rem;
+    font-size: 1.25rem;
+    border-radius: 5px 5px 0 0;
+    z-index: 2;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    text-wrap: nowrap;
+
+}
+
+.btn--dropdown {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform-origin: center top;
+    transform: rotate(0deg) translate(0, -50%);
+    height: 2.5rem;
+    aspect-ratio: 1;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../assets/images/dropdown-light.svg");
+    transition: 300ms transform linear;
+    z-index: 1;
+    cursor: pointer;
+}
+
+body.dark .btn--dropdown{
+    background-image: url("../../assets/images/dropdown-dark.svg");
+}
+
+.btn--dropdown.active {
+    transform: rotate(180deg) translate(0, -50%);
+}
+
+.btn--dropdown:hover {
+    filter: contrast(70%);
+}
+
+.btn--dropdown:active {
+    filter: contrast(50%);
+}
+
+.dropdown__list-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transform-origin: center top;
+    transform: scale(0);
+    transition: 300ms transform linear;
+    border: 2px solid var(--outline-color);
+    border-radius: 5px;
+}
+
+.dropdown__list-container.active {
+    transform: scale(1);
+}
+
+.dropdown__list {
+    width: 100%;
+    list-style-type: none;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.dropdown__list::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgb(205, 205, 205);
+}
+
+.dropdown__list::-webkit-scrollbar-thumb {
+    width: 100%;
+    background-color: rgb(89, 89, 89);
+}
+
+.dropdown__list-item {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: var(--element-deeper-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+    user-select: none;
+}
+
+.dropdown__list-item:hover {
+    filter: contrast(70%)
+}
+
+.dropdown__list-item:active {
+    filter: contrast(50%)
+}

@@ -1,0 +1,29 @@
+.unfound__main{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--element-color);
+}
+
+.unfound__heading{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    text-align: center;
+}
+
+.unfound__message{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.unfound__link{
+    font-size: 1.25rem;
+    color: var(--link-color);
+    font-weight: 500;
+}

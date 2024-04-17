@@ -1,0 +1,52 @@
+.darkmode-toggle-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.darkmode-toggle-container > *{
+    flex-shrink: 0;
+}
+
+.darkmode-icon{
+    height: 2rem;
+    aspect-ratio: 1;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/images/sun.svg");
+}
+
+.darkmode-toggle-container.active .darkmode-icon{
+    background-image: url("../../assets/images/moon.svg");
+}
+
+.darkmode-toggle{
+    --_width: 2.75rem;
+    --_gap: 3px;
+    --_circle-size: 1.2rem;
+    position: relative;
+    width: var(--_width);
+    height: 1.5rem;
+    background-color: var(--element-deeper-color);
+    border-radius: 100vh;
+    cursor: pointer;
+    box-shadow: 0 0 8cqh rgba(0, 0, 0, 0.145);
+}
+
+.darkmode-toggle-circle{
+    height: var(--_circle-size);
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: var(--_gap);
+    transform: translate(0, -50%);
+    transition: 200ms transform ease-out;
+}
+
+.darkmode-toggle-container.active .darkmode-toggle-circle{
+    transform: translate(calc(var(--_width) - var(--_circle-size) - 2 * var(--_gap)), -50%)
+}
